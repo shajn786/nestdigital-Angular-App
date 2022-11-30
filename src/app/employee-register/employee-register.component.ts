@@ -7,4 +7,33 @@ import { Component } from '@angular/core';
 })
 export class EmployeeRegisterComponent {
 
+  empid=""
+  fname=""
+  lname=""
+  houseno=""
+  housename=""
+  streetname=""
+  pincode=""
+  district=""
+  state=""
+  country=""
+  mobno=""
+  email=""
+  parentname=""
+  gender=""
+  highestdefree=""
+  yearofexperience=""
+  dateofjoining=""
+  username=""
+  password=""
+  confirmpassword=""
+
+  readEmployee=()=>
+  {
+        let data:any ={"password":this.password,"confirmpassword":this.confirmpassword}
+        console.log(data)
+  }
+
+
+
 }
