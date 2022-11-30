@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +9,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomenavbarComponent } from './homenavbar/homenavbar.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminViewallCourseComponent } from './admin-viewall-course/admin-viewall-course.component';
+import { AdminViewallFreindsComponent } from './admin-viewall-freinds/admin-viewall-freinds.component';
 
 
 const myRoute : Routes=[
@@ -24,6 +27,15 @@ const myRoute : Routes=[
 },
 {
   path:"contactus",component:ContactUsComponent
+},
+{
+  path:"adminlogin",component:AdminLoginComponent
+},
+{
+  path:"admincourse",component:AdminViewallCourseComponent
+},
+{
+  path:"adminfriend",component:AdminViewallFreindsComponent
 }
 
 ]
@@ -36,7 +48,10 @@ const myRoute : Routes=[
     GalleryComponent,
     ContactUsComponent,
     AboutUsComponent,
-    HomenavbarComponent
+    HomenavbarComponent,
+    AdminLoginComponent,
+    AdminViewallCourseComponent,
+    AdminViewallFreindsComponent
   ],
   imports: [
     BrowserModule,
