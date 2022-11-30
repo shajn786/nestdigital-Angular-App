@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-admin-viewall-freinds',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin-viewall-freinds.component.css']
 })
 export class AdminViewallFreindsComponent {
+
+  constructor(private api:ApiService)
+  {
+        api.fetchFriends().subscribe(
+
+          (response)=>
+          {
+            this.data = response
+          }
+
+        )
+  }
+
+  data:any =[]
 
 }

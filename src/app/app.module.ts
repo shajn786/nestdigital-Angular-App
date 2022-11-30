@@ -14,6 +14,7 @@ import { AdminViewallCourseComponent } from './admin-viewall-course/admin-viewal
 import { AdminViewallFreindsComponent } from './admin-viewall-freinds/admin-viewall-freinds.component';
 import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const myRoute : Routes=[
@@ -54,13 +55,15 @@ const myRoute : Routes=[
     AdminLoginComponent,
     AdminViewallCourseComponent,
     AdminViewallFreindsComponent,
-    AdminnavbarComponent,
-    FormsModule
+    AdminnavbarComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myRoute)
+    RouterModule.forRoot(myRoute),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

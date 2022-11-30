@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-admin-viewall-course',
@@ -7,6 +8,19 @@ import { Component } from '@angular/core';
 })
 export class AdminViewallCourseComponent {
 
+  constructor(private api:ApiService)
+  {
+         api.fetchCourses().subscribe(
+  
+          (response)=>
+          {
+             this.data =response
+          }
+  
+         )
+  }
+
+  data:any=[]
   
 
 }
