@@ -12,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminViewallCourseComponent } from './admin-viewall-course/admin-viewall-course.component';
 import { AdminViewallFreindsComponent } from './admin-viewall-freinds/admin-viewall-freinds.component';
+import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
 
 
 const myRoute : Routes=[
@@ -51,7 +52,8 @@ const myRoute : Routes=[
     HomenavbarComponent,
     AdminLoginComponent,
     AdminViewallCourseComponent,
-    AdminViewallFreindsComponent
+    AdminViewallFreindsComponent,
+    AdminnavbarComponent
   ],
   imports: [
     BrowserModule,
