@@ -7,22 +7,18 @@
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
                     <h1 style="color:brown">View all Friends</h1>
                 </div>
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of data">
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="{{i.image}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
+                          <h5 class="card-title">{{i.name}}</h5>
+                           </div>
                         <ul class="list-group list-group-flush">
-                          <li class="list-group-item">An item</li>
-                          <li class="list-group-item">A second item</li>
-                          <li class="list-group-item">A third item</li>
+                          <li class="list-group-item">Friend Name :{{i.friendName}}</li>
+                          <li class="list-group-item">Friend NickName :{{i.friendNickName}}</li>
+                          <li class="list-group-item">Description{{i.DescribeYourFriend}}</li>
                         </ul>
-                        <div class="card-body">
-                          <a href="#" class="card-link">Card link</a>
-                          <a href="#" class="card-link">Another link</a>
-                        </div>
+                        
                       </div>
 
                 </div>
