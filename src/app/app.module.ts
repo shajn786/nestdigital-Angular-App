@@ -15,6 +15,10 @@ import { AdminViewallFreindsComponent } from './admin-viewall-freinds/admin-view
 import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EmployeeLoginComponent } from './employee-login/employee-login.component';
+import { EmployeeRegisterComponent } from './employee-register/employee-register.component';
+import { EmployeeAddCourseComponent } from './employee-add-course/employee-add-course.component';
+import { EmployeeAddFriendComponent } from './employee-add-friend/employee-add-friend.component';
 
 
 const myRoute : Routes=[
@@ -39,6 +43,18 @@ const myRoute : Routes=[
 },
 {
   path:"adminfriend",component:AdminViewallFreindsComponent
+},
+{
+  path:"employeelogin",component:EmployeeLoginComponent
+},
+{
+  path:"employeeregister",component:EmployeeRegisterComponent
+},
+{
+  path:"addcourse",component:EmployeeAddCourseComponent
+},
+{
+  path:"addfriend",component:EmployeeAddFriendComponent
 }
 
 ]
@@ -55,7 +71,11 @@ const myRoute : Routes=[
     AdminLoginComponent,
     AdminViewallCourseComponent,
     AdminViewallFreindsComponent,
-    AdminnavbarComponent
+    AdminnavbarComponent,
+    EmployeeLoginComponent,
+    EmployeeRegisterComponent,
+    EmployeeAddCourseComponent,
+    EmployeeAddFriendComponent
     
   ],
   imports: [
