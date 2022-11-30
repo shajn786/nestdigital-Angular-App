@@ -13,6 +13,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminViewallCourseComponent } from './admin-viewall-course/admin-viewall-course.component';
 import { AdminViewallFreindsComponent } from './admin-viewall-freinds/admin-viewall-freinds.component';
 import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
+import { FormsModule } from '@angular/forms';
 
 
 const myRoute : Routes=[
@@ -53,7 +54,8 @@ const myRoute : Routes=[
     AdminLoginComponent,
     AdminViewallCourseComponent,
     AdminViewallFreindsComponent,
-    AdminnavbarComponent
+    AdminnavbarComponent,
+    FormsModule
   ],
   imports: [
     BrowserModule,
