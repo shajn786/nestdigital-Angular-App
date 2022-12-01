@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class ContactUsComponent {
 
+  firstname=""
+  secondname=""
+  email=""
+  description=""
+
+  readValues=()=>
+  {
+    let data:any ={"firstname":this.firstname,"secondname":this.secondname,"email":this.email,"description":this.description}
+    console.log(data)
+  }
+
+
 }
