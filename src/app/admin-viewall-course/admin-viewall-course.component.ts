@@ -14,6 +14,8 @@ export class AdminViewallCourseComponent {
   
           (response)=>
           {
+            this.loading=false
+            console.log(response)
              this.data =response
           }
   
@@ -21,6 +23,7 @@ export class AdminViewallCourseComponent {
   }
 
   data:any=[]
+  loading :boolean=true
   
 
 }
