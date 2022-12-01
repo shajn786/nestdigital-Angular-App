@@ -14,6 +14,7 @@ export class AdminViewallFreindsComponent {
 
           (response)=>
           {
+            this.loading=false
             this.data = response
           }
 
@@ -21,5 +22,8 @@ export class AdminViewallFreindsComponent {
   }
 
   data:any =[]
+
+  loading:boolean=true
+  
 
 }

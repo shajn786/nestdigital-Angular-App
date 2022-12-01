@@ -7,21 +7,56 @@
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
                     <h1 style="color:brown">View all Friends</h1>
                 </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of data">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://www.w3schools.com/howto/img_avatar.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">{{i.name}}</h5>
-                           </div>
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item">Friend Name :{{i.friendName}}</li>
-                          <li class="list-group-item">Friend NickName :{{i.friendNickName}}</li>
-                          <li class="list-group-item">Description{{i.DescribeYourFriend}}</li>
-                        </ul>
-                        
-                      </div>
 
-                </div>
+                <ng-container *ngIf = "loading; then loadingScreen else dataScreen"></ng-container>
+                <ng-template #loadingScreen>
+                    <div class="spinner-border text-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                      <div class="spinner-border text-secondary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                      <div class="spinner-border text-success" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                      <div class="spinner-border text-danger" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                      <div class="spinner-border text-warning" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                      <div class="spinner-border text-info" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                      <div class="spinner-border text-light" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                      <div class="spinner-border text-dark" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                    </div>
+                </ng-template>
+                <ng-template #dataScreen>
+                 
+                    <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of data">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://www.w3schools.com/howto/img_avatar.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">{{i.name}}</h5>
+                               </div>
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">Friend Name :{{i.friendName}}</li>
+                              <li class="list-group-item">Friend NickName :{{i.friendNickName}}</li>
+                              <li class="list-group-item">Description :{{i.DescribeYourFriend}}</li>
+                            </ul>
+                            
+                          </div>
+                      
+    
+                    </div>
+                </ng-template>
+                
             </div>
         </div>
     </div>
